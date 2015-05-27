@@ -1,0 +1,23 @@
+{
+  "name": "gokb-crossref",
+  "version": "1.0.0",
+  "description": "Some utility scripts for checking ISSNs in Gokb and Crossref.",
+  "main": "gokb-crossref.js",
+  "scripts": {
+    "test": "node gokb-crossref_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rsdoiel/gokb-crossref.git"
+  },
+  "keywords": [
+    "GoKB",
+    "CrossRef",
+    "ISSN"
+  ],
+  "author": "R. S. Doiel",
+  "bugs": {
+    "url": "https://github.com/rsdoiel/gokb-crossref/issues"
+  },
+  "homepage": "https://github.com/rsdoiel/gokb-crossref"
+}
