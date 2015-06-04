@@ -23,6 +23,15 @@ function aggregateResults($dataset_filename, $records, $i) {
     return $i;
 }
 
+// Turn a 8 digit number into 4-4 ISSN formatted string.
+function formatISSN($s) {
+    if (trim($s) !== "") {
+        return substr($s, 0, 4) . "-" . substr($s, 4);
+    }
+    return "";
+}
+
+
 // Create an object of fieldnames and their index from unexploded string.
 function extractFields($s) {
     $cols = explode(DELIMITER, strtolower($s));
@@ -54,10 +63,10 @@ function extractRecord($fields, $row) {
     if (count($cols) > 2) {
         $record = array(
             "title" => $cols[$title_i],
-            "issn" => $cols[$issn_i]
+            "issn" => formatISSN($cols[$issn_i])
         );
         if ($e_issn_i !== false && trim($cols[$e_issn_i]) !== "") {
-            $record['e_issn'] = $cols[$e_issn_i];
+            $record['e_issn'] = formatISSN($cols[$e_issn_i]);
         }
         return $record;
     }

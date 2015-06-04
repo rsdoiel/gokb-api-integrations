@@ -8,5 +8,7 @@ HTTP client, Drakma, available in Quicklisp
 http://weitz.de/drakma/
 
 
+# Useful results
 
-
++ [CrossRef API documentation](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
++ [Example Query using /journals API call](http://api.crossref.org/journals/1548-1433)
