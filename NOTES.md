@@ -11,4 +11,6 @@ http://weitz.de/drakma/
 # Useful results
 
 + [CrossRef API documentation](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
-+ [Example Query using /journals API call](http://api.crossref.org/journals/1548-1433)
++ Examples of api.crossref.org/journals/*
+    + [curl -O http://api.crossref.org/journals/1548-1433](http://api.crossref.org/journals/1548-1433)
+    + [curl -O http://api.crossref.org/journals/0360-0300](http://api.crossref.org/journals/0360-0300)
