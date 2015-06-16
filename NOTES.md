@@ -29,3 +29,7 @@ http://weitz.de/drakma/
 
 [Docs](http://www.sherpa.ac.uk/romeo/apimanual.php?la=en)
 
+## JISC resources
+
++ [KB+](https://www.kbplus.ac.uk/kbplus/) - like GOKb but JISC version.
++ [Public Export](https://www.kbplus.ac.uk/kbplus/publicExport)
