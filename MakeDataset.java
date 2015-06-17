@@ -246,7 +246,9 @@ class IO {
 class Usage {
     public void usage(String msg, int exitCode) {
         String s =  "USAGE: java MakeDataset INPUT_FILE [INPUT_FILE...]\n\n"
-            + "Example: java MakeDataset CUFTS/* > cufts-dataset.json\n\n"
+            + "Examples:\n"
+            + "\tjava MakeDataset CUFTS/* > cufts-dataset.json\n"
+            + "\tjava MakeDataset $(find CUFTS -type f | grep -vE \"\\.xml$\") > dataset.json\n\n"
             + msg;
         if (exitCode == 0) {
             System.out.println(s);
