@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<project name="GOKb API Integration" default="dist">
+    <description>
+        Setup and build the GOKb API integrations tools.
+    </description>
+
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    <property name="dist" location="dist"/>
+
+    <target name="init">
+        <echo>Initialize</echo>
+        <tstamp/>
+        <mkdir dir="${build}"/> 
+        <mkdir dir="${dist}"/>
+    </target>
+    <target name="compile" depends="init">
+        <echo>Compile</echo>
+        <javac srcdir="${src}" destdir="${build}" debug="off" includeantruntime="yes" />
+    </target>
+
+    <target name="dist" depends="compile">
+        <jar jarfile="${dist}/GOKb-API-Integration-${DSTAMP}.jar" basedir="${build}" />
+    </target>
+
+    <target name="clean" description="clean up">
+        <echo>Clean up</echo>
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+    </target>
+</project>

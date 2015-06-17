@@ -1,11 +1,12 @@
 /**
  * MakeDataset.java - prototype to convert the CUFTS data into a simple JSON data file.
  */
+package MakeDataset;
+
 import java.io.*;
 import java.util.*;
 import java.lang.*;
 import java.net.URLEncoder;
-
 
 // Turn a 8 digit number into 4-4 ISSN formatted string.
 class Format {
