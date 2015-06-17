@@ -5,3 +5,6 @@ node_modules/*
 CUFTS/*
 config-info.txt
 *.class
+*.json
+build/*
+dist/*
