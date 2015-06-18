@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<project name="GOKb API Integration" default="dist">
+<project name="GOKbIntegrations" default="dist">
     <description>
-        Setup and build the GOKb API integrations tools.
+        Setup and build the GOKb integrations tools.
     </description>
 
     <property name="src" location="src"/>
@@ -20,7 +20,7 @@
     </target>
 
     <target name="dist" depends="compile">
-        <jar jarfile="${dist}/GOKb-API-Integration-${DSTAMP}.jar" basedir="${build}" />
+        <jar jarfile="${dist}/GOKbIntegrations-${DSTAMP}.jar" basedir="${build}" />
     </target>
 
     <target name="clean" description="clean up">

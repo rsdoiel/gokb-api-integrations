@@ -2,6 +2,8 @@
  * QuerySherpaRomeo.java - given a list of JSON objects with issn or e_issn
  * get back the usage/license information from Sherpa/Romeo API.
  */
+package GOKbIntegrations;
+
 import java.io.*;
 
 public class QuerySherpaRomeo {
