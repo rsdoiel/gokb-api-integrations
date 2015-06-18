@@ -1,5 +1,7 @@
 /**
  * IO.java - IO wrapper scripts for building Unix style pipe friendly utilities.
+ *
+ * @author R. S. Doiel, <rsdoiel@caltech.edu>
  */
 package GOKbIntegrations;
 

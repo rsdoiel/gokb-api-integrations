@@ -1,5 +1,7 @@
 /**
  * MakeDataset.java - prototype to convert the CUFTS data into a simple JSON data file.
+ *
+ * @author R. S. Doiel, <rsdoiel@caltech.edu>
  */
 package GOKbIntegrations;
 
@@ -7,26 +9,6 @@ import java.io.*;
 import java.util.*;
 import java.lang.*;
 import java.net.URLEncoder;
-
-// Turn a 8 digit number into 4-4 ISSN formatted string.
-class Format {
-    public String ISSN(String s) {
-        if (s.trim().equals("") == false) {
-            return s.substring(0, 4) + "-" + s.substring(4);
-        }
-        return "";
-    }
-
-    public String quote(String s) {
-        String o = "";
-        try {
-            o = URLEncoder.encode(s, "UTF-8");
-        } catch (UnsupportedEncodingException err) {
-            System.err.println(err.toString());
-        }
-        return o;
-    }
-}
 
 // Extract - process the IO and extract data.
 class Extract {
@@ -151,10 +133,10 @@ class Extract {
 
 class Usage {
     public void usage(String msg, int exitCode) {
-        String s =  "USAGE: java MakeDataset INPUT_FILE [INPUT_FILE...]\n\n"
+        String s =  "USAGE: java GOKbIntegrations/MakeDataset INPUT_FILE [INPUT_FILE...]\n\n"
             + "Examples:\n"
-            + "\tjava MakeDataset CUFTS/* > cufts-dataset.json\n"
-            + "\tjava MakeDataset $(find CUFTS -type f | grep -vE \"\\.xml$\") > dataset.json\n\n"
+            + "\tjava GOKbIntegrations/MakeDataset CUFTS/* > cufts-dataset.json\n"
+            + "\tjava GOKbIntegrations/MakeDataset $(find CUFTS -type f | grep -vE \"\\.xml$\") > dataset.json\n\n"
             + msg;
         if (exitCode == 0) {
             System.out.println(s);
